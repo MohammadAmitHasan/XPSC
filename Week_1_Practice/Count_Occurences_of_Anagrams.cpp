@@ -12,7 +12,7 @@ public:
 
         if (txtLen < patLen)
         {
-            return 0; // No anagrams possible
+            return 0;
         }
 
         vector<int> patCount(26, 0);
@@ -60,3 +60,5 @@ int main()
     }
     return 0;
 }
+
+// https://practice.geeksforgeeks.org/problems/count-occurences-of-anagrams5839/1
