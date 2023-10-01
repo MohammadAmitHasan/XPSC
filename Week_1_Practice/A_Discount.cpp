@@ -3,10 +3,12 @@ using namespace std;
 
 int main()
 {
-    int a, b;
+    double a, b;
     cin >> a >> b;
-    double percentage = (a - b) * 100 / a;
-    cout << fixed << setprecision(10) << percentage << endl;
+    double discount = (a - b) * 100 / a;
+
+    cout << discount << endl;
+
     return 0;
 }
 
