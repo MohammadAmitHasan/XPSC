@@ -26,3 +26,5 @@ int main()
     cout << mx << endl;
     return 0;
 }
+
+// https://atcoder.jp/contests/abc150/tasks/abc150_b?lang=en
