@@ -11,7 +11,7 @@ int main()
         int n;
         cin >> n;
 
-        vector<map<string, int>> wordCount(3);
+        map<string, vector<int>> mp;
 
         for (int i = 0; i < 3; i++)
         {
@@ -19,32 +19,32 @@ int main()
             {
                 string word;
                 cin >> word;
-                wordCount[i][word]++;
+                mp[word].push_back(i);
             }
         }
 
         int points[3] = {0, 0, 0};
 
-        // for (int i = 0; i < 3; i++)
-        // {
-        for (const auto &kv : wordCount[2])
+        for (const auto &entry : mp)
         {
-            if (wordCount[1][kv.first] == 0 && wordCount[0][kv.first] == 0)
+            for (int value : entry.second)
             {
-                points[0] += 3;
+                if (entry.second.size() == 1)
+                {
+                    points[value] += 3;
+                }
+                if (entry.second.size() == 2)
+                {
+                    points[value]++;
+                }
             }
-            else if (wordCount[0][kv.first] > 0 && wordCount[1][kv.first] > 0)
-            {
-            }
-            else
-            {
-                points[0]++;
-            }
-            cout << kv.first << " " << wordCount[1][kv.first] << " " << wordCount[2][kv.first] << endl;
         }
-        cout << points[0];
-        // cout << endl;
-        // }
+        for (int i = 0; i < 3; i++)
+        {
+            cout << points[i] << " ";
+        }
+
+        cout << endl;
     }
 
     return 0;
