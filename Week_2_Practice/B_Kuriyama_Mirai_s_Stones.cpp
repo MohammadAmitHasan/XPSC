@@ -5,7 +5,7 @@ int main()
 {
     int n;
     cin >> n;
-    int arr[n + 1], sorted_Arr[n + 1], preArr[n + 1], sortedPreArr[n + 1];
+    long long arr[n + 1], sorted_Arr[n + 1], preArr[n + 1], sortedPreArr[n + 1];
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
